@@ -22,7 +22,8 @@ const Permission = connection.define('permission', {
     }
 })
 
-Role.belongsToMany(Permission,  {through: PermissionRole})
+Role.belongsToMany(Permission, {through: PermissionRole})
 Permission.belongsToMany(Role, {through: PermissionRole})
+PermissionRole.hasMany(Permission, {foreignKey: 'id'})
 
 module.exports = Permission

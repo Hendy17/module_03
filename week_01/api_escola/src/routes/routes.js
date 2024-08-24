@@ -11,4 +11,5 @@ routes.use('/alunos', alunoRoutes)
 routes.use('/cursos', cursoRoutes)
 routes.use('/login', loginRoutes)
 
+
 module.exports = routes
